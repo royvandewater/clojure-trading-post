@@ -1,5 +1,11 @@
 (ns clojure-trading-post.core
-  (:require [clojure-trading-post.http :as http]))
+  (:require [clojure-trading-post.credentials :as credentials]
+            [clojure-trading-post.http :as http]))
+
+(defn access-token-from-file
+  "Get access-token from a credentials.json file. A credentials.json must have at least a refresh token."
+  [credentials-file-path]
+  (credentials/access-token-from-file credentials-file-path))
 
 (defn create-buy-order
   "Create a buy order"

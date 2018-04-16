@@ -1,4 +1,5 @@
 (ns clojure-trading-post.http
+  (:refer-clojure :rename {get core-get})
   (:require [clj-http.client :as client]
             [clojure.data.json :as json]
             [clojure.string :as string]))
